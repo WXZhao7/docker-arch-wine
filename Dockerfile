@@ -22,10 +22,6 @@ RUN git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 RUN yay -S deepin-wine-wechat deepin-wine-qq --noconfirm
 
 # clean
-RUN yay -Yc --noconfirm && sudo pacman -Scc --noconfirm
-# install
-# RUN git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
-# COPY ./WeChat /home/temp
-# COPY ./QQ /home/temp
+# RUN yay -Yc --noconfirm && sudo pacman -Scc --noconfirm
 
 CMD ["/usr/bin/bash"]

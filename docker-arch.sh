@@ -27,11 +27,13 @@ docker run -dit --rm  \
     -v /mnt:/mnt\
     --device /dev/snd --ipc="host" \
     --net host \
-    --restart unless-stopped \
     --name $USER-arch \
-    docker-arch
+    myarch:latest
+    # --restart unless-stopped \
     # -u $(id -u):$(id -g) \
 # --rm: Automatically remove the container when it exits
 # -d: show the ID of container
 # --net host: allow local network connection
 # --restart unless-stopped: autostart
+
+# docker exec $USER-arch /opt/apps/com.qq.weixin.deepin/files/run.sh
